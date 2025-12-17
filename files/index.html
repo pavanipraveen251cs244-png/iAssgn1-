@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web → API Test</title>
+</head>
+<body>
+  <h1>Web Container</h1>
+  <button onclick="callAPI()">Call API</button>
+  <p id="result"></p>
+
+  <script>
+    function callAPI() {
+      fetch('/api')
+        .then(res => res.text())
+        .then(data => document.getElementById('result').innerText = data);
+    }
+  </script>
+</body>
+</html>
